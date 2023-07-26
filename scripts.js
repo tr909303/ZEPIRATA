@@ -106,16 +106,17 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function toggleFullScreen() {
-    if (videoPlayer.requestFullscreen) {
-      videoPlayer.requestFullscreen();
-    } else if (videoPlayer.mozRequestFullScreen) {
-      videoPlayer.mozRequestFullScreen();
-    } else if (videoPlayer.webkitRequestFullscreen) {
-      videoPlayer.webkitRequestFullscreen();
-    } else if (videoPlayer.msRequestFullscreen) {
-      videoPlayer.msRequestFullscreen();
-    }
+  if (videoPlayer.requestFullscreen) {
+    videoPlayer.requestFullscreen();
+  } else if (videoPlayer.webkitRequestFullscreen) {
+    videoPlayer.webkitRequestFullscreen();
+  } else if (videoPlayer.mozRequestFullScreen) {
+    videoPlayer.mozRequestFullScreen();
+  } else if (videoPlayer.msRequestFullscreen) {
+    videoPlayer.msRequestFullscreen();
   }
+}
+
 
   init();
 });
