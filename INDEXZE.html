@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Live TV Player">
+  <title>ZE PIRATA TV</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>ZE PIRATA</h1>
+    <a href="sporttv2.html">
+      <button class="dia-de-jogo-button">DESPORTO CLICA AQUI</button>
+    </a>
+  </header>
+
+  <main>
+    <section class="channel-list">
+      <!-- Buttons for TV channels will be dynamically added here -->
+    </section>
+
+    <section class="video-container">
+      <video id="videoPlayer" controls></video>
+      <div class="custom-controls">
+        <button id="playButton" class="mdi mdi-play" aria-label="Play"></button>
+        <input type="range" id="volumeControl" class="volume-control" min="0" max="1" step="0.01">
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+        <button id="fullscreenButton" class="mdi mdi-fullscreen" aria-label="Fullscreen"></button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 ZE PIRATA TV. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+  <script src="scripts.js" data-dashjs-player="true"></script>
+  <script src="scripts.js" data-HLSjs-player="true"></script>
+</body>
+</html>
