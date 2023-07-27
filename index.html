@@ -10,6 +10,7 @@
 <body>
   <header>
     <h1>ZE PIRATA</h1>
+    
     <a href="sporttv2.html">
       <button class="dia-de-jogo-button">DESPORTO CLICA AQUI</button>
     </a>
@@ -17,8 +18,10 @@
 
   <main class="container">
     <section class="channel-list">
-      <!-- Buttons for TV channels will be dynamically added here -->
+    
     </section>
+
+  
 
     <section class="video-container">
       <video id="videoPlayer" controls></video>
@@ -29,6 +32,7 @@
           <div class="progress"></div>
         </div>
         <button id="fullscreenButton" class="mdi mdi-fullscreen" aria-label="Fullscreen"></button>
+        <button id="pipButton">PiP</button>
       </div>
     </section>
   </main>
@@ -39,7 +43,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
   <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
-  <script src="scripts.js" data-dashjs-player="true"></script>
-  <script src="scripts.js" data-HLSjs-player="true"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
