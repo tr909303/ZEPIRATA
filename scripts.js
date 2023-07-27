@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     "SIC NOTICIAS": "https://sicnot.live.impresa.pt/sicnot.m3u8",
     "SIC NOTICIAS 2": "https://sicnot.live.impresa.pt/sicnot540p.m3u8",
     "CMTV": "https://nes04.quest123.top:8088/live/agrrrr/playlist.m3u8?id=116560&pk=d6bf612642279853a2dc6e9ab8912339975880c33c1218ff504e61d45cce34b16f9b3fe7469c502e6ce89e8875b1bf7aa306156d5412a57e2801699d85a93a79",
-    "TVI Channel 4": "https://video-auth6.iol.pt/live_tvi/live_tvi/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9Ny8yNi8yMDIzIDE6MTk6NSBQTSZoYXNoX3ZhbHVlPVZ0empYVnE2Q3ZjbGpRU05zNjc3V1E9PSZ2YWxpZG1pbnV0ZXM9MTQ0MCZpZD0wNDQyNzAzNy05ZWI1LTQ4MjMtOWIwNS03ZDJkYWY3OGEzMDE=",
+    "TVI": "https://video-auth6.iol.pt/live_tvi/live_tvi/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9Ny8yNi8yMDIzIDE6MTk6NSBQTSZoYXNoX3ZhbHVlPVZ0empYVnE2Q3ZjbGpRU05zNjc3V1E9PSZ2YWxpZG1pbnV0ZXM9MTQ0MCZpZD0wNDQyNzAzNy05ZWI1LTQ4MjMtOWIwNS03ZDJkYWY3OGEzMDE=",
     "RTP3": "https://streaming-live.rtp.pt/livetvhlsDVR/rtpnHDdvr.smil/chunklist_b2540000_DVR_slpor.m3u8",
     "CNN Portugal": "https://video-auth4.iol.pt/live_cnn/live_cnn/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9Ny8yNi8yMDIzIDk6MTA6MjggUE0maGFzaF92YWx1ZT1rVTRlRk9meFhLNEZSUFZkNGR6UGhRPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9M2JlYTE5MTItNWU3Ny00YWQyLTgyNGYtN2IwYjIwOGQ0NTQ2",
     "FUEL TV": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/fuel-tv/9fac6918-b3c9-41b8-a15a-f1b000d5ba91/1.m3u8",
