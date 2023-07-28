@@ -10,39 +10,30 @@ body {
 .container {
   max-width: 800px;
   margin: 0 auto;
+  overflow: hidden; /* Add this to prevent horizontal scroll */
 }
 
 /* Styling for the video player container */
 .video-container {
   position: relative;
   width: 100%;
-  border-radius: 8px;
+  max-width: 800px; /* Set a maximum width for the video container */
+  margin: 0 auto; /* Center the video container horizontally */
+  border-radius: 8px; /* Increase the border radius for a more classic look */
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Improved box shadow */
   background-color: #000;
+  transition: transform 0.2s ease-in-out; /* Move hover effect here */
 }
 
 /* Full-width video */
 video {
   width: 100%;
-  border-radius: 8px;
+  height: auto; /* Let the video adjust its height automatically */
+  display: block; /* Remove any extra spacing around the video element */
+  border-radius: 8px; /* Match the border radius of the container */
 }
 
-/* Custom controls for the video */
-.custom-controls {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  opacity: 0; /* Hide controls by default */
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 2 2 8px 8px;
-}
 
 /* Show controls on hover */
 .video-container:hover .custom-controls {
@@ -74,6 +65,7 @@ button:hover {
   position: relative;
   cursor: pointer;
   border-radius: 2px;
+  animation: progressAnimation 5s infinite; /* Subtle border animation */
 }
 
 /* Progress bar fill */
@@ -99,17 +91,19 @@ button:hover {
   color: #ffffff;
   font-size: 16px;
   padding: 10px 16px;
-  border: none;
+  border: 2px solid #ffffff; /* Add border to channel buttons */
   border-radius: 10px;
   margin: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
   outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow to channel buttons */
 }
 
 /* Button hover effect */
 .channel-list button:hover {
   background-color: #45a049;
+  transform: scale(1.05); /* Slightly increase size on hover */
 }
 
 /* Hide default video controls for webkit browsers */
@@ -139,19 +133,6 @@ main {
   padding: 20px;
 }
 
-/* Add a border and box-shadow to the channel buttons */
-.channel-list button {
-  border: 2px solid #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease-in-out;
-}
-
-/* Add a hover effect for the video container */
-.video-container:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  transform: scale(1.02);
-}
-
 /* Styling for footer */
 footer {
   background-color: #000000;
@@ -160,11 +141,6 @@ footer {
   padding: 16px;
   font-size: 14px;
   border-radius: 0 0 8px 8px;
-}
-
-/* Add a subtle border animation to the progress bar */
-.progress-bar {
-  animation: progressAnimation 5s infinite;
 }
 
 /* Responsive layout for smaller screens */
@@ -190,3 +166,7 @@ footer {
   /* Adjust font size and padding for header and footer */
   header,
   footer {
+    font-size: 18px;
+    padding: 12px;
+  }
+}
