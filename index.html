@@ -124,7 +124,7 @@
           id="videoPlayer"
           class="video-js vjs-fluid"
           controls
-          poster="path_to_video_poster.jpg"
+          poster="file:///MAC_OS - dados/Users/cardao/Downloads/ZEPIRATA.TAILWIND/path_to_video_poster.jpg"
         >
           <!-- Video Source -->
           <source src="" type="application/x-mpegURL" />
@@ -186,6 +186,8 @@
       const fullscreenButton = document.getElementById('fullscreenButton');
       const diaDeJogoButton = document.querySelector('.dia-de-jogo-button');
       const channelListContainer = document.querySelector('.channel-list');
+      		
+		
 
       const channels = {
     "AFRO MUSIC": "http://213.13.16.138/shls/LIVE%24Afro_Music/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
@@ -334,8 +336,6 @@
         });
 
         videoPlayer.on('timeupdate', updateProgressBar);
-
-        fullscreenButton.addEventListener('click', toggleFullScreen);
 
         diaDeJogoButton.addEventListener('click', () => {
           const currentChannelUrl = videoPlayer.src();
