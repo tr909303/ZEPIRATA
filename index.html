@@ -1,353 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZE PIRATA</title>
-  <!-- Add Tailwind CSS -->
+  <title>ZE PIRATA TV</title>
+  <!-- External Stylesheets -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <!-- Add video.js CSS (optional, but recommended) -->
-  <link href="https://vjs.zencdn.net/7.15.4/video-js.min.css" rel="stylesheet">
+  <link href="https://vjs.zencdn.net/8.10.0/video-js.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Inline Styles -->
   <style>
-	  @keyframes matrix-animation {
-  from {
-    transform: translateY(0%);
-  }
-  to {
-    transform: translateY(-100%);
-  }
-}
-
-.matrix-text {
-  font-family: 'MatrixFont', monospace;
-  position: relative;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: matrix-animation 5s linear infinite;
-}
-
-.particle {
-  position: absolute;
-  background-color: #68d391; /* Green color */
-  width: 2px;
-  height: 2px;
-  border-radius: 50%;
-  opacity: 0;
-}
-
-/* Particle animation */
-@keyframes particle-animation {
-  0% {
-    transform: translateY(0) translateX(0) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(calc(var(--y) * 1px)) translateX(calc(var(--x) * 1px)) scale(0);
-    opacity: 0;
-  }
-}
-
-    body {
-      background-color: #000;
-      color: #68d391;
-    }
-
-    .container {
-      max-width: 1200px;
-    }
-
-    .video-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .video-js {
-      width: 100%;
-      max-height: 600px;
-    }
-
-    .channel-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  max-width: 400px;
-  margin: 1 auto;
-  /* Add the following lines */
-  height: 500px; /* Set the desired height for the channel list container */
-  overflow-y: auto; /* Add vertical scroll when content overflows */
-}
-
-    .channel-button {
-  padding: 12px;
-  background-color: #68D391;
-  color: #000;
-  font-size: 18px;
-  font-weight: bold;
-  border: 2px solid #68D391;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-}
-
-.channel-button:hover {
-  background-color: #000;
-  color: #68D391;
-  border-color: #000;
-}
-
+    /* Your additional custom styles can be added here */
   </style>
 </head>
-
 <body>
-	
+ 
 <!-- Header -->
-<header class="bg-black py-8">
+<header class="bg-black py-4 blur">
   <div class="container mx-auto text-center">
-    <h1 class="text-8xl font-extrabold text-green-400 uppercase tracking-wide mb-4 matrix-text">ZE PIRATA TV</h1>
-    <p class="text-lg text-gray-300">Watch your favorite channels in the virtual world of The Matrix!</p>
+    <h1 class="text-3xl font-extrabold text-green-400 uppercase matrix-text tracking-wider">ZE PIRATA TV</h1>
+    <p class="text-gray-300 mt-2">Experience the Matrix like never before!</p>
   </div>
 </header>
 
-
-
-
-  <!-- Main Content -->
-  <main class="container mx-auto py-8">
-    <div class="flex flex-col md:flex-row">
-      <!-- Video Player -->
-      <div class="video-container md:w-2/3">
-        <video
-          id="videoPlayer"
-          class="video-js vjs-fluid"
-          controls
-          poster="file:///MAC_OS - dados/Users/cardao/Downloads/ZEPIRATA.TAILWIND/path_to_video_poster.jpg"
-        >
-          <!-- Video Source -->
-          <source src="" type="application/x-mpegURL" />
-          <!-- Fallback for older browsers -->
-          Your browser does not support the video tag.
-        </video>
-        
-     
-      </div>
-
-      <!-- Channel Buttons -->
-      <div class="channel-list md:w-1/3 mt-8">
-        <!-- The channel buttons will be dynamically added here -->
+<!-- Main Content -->
+<main class="container mx-auto py-8">
+  <div class="flex flex-col md:flex-row">
+    <!-- Video Player -->
+    <div class="video-container md:w-2/3">
+      <video id="videoPlayer" class="video-js vjs-fluid" controls poster="https://douglasgreen.com/wp-content/uploads/2014/03/video-play-btn-featured.png">
+        <!-- Fallback for older browsers -->
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <!-- Channel Buttons -->
+    <div class="channel-list md:w-1/3 mt-5 md:mt-0 md:ml-4">
+      <div class="flex flex-col gap-2">
+        <!-- Channel buttons will be dynamically added here -->
       </div>
     </div>
-  </main>
+  </div>
+</main>
 
-  <!-- Footer -->
-  <footer class="bg-black text-green-400 text-center py-4">
-    <p>&copy; 2023 ZE PIRATA TV. All rights reserved.</p>
-  </footer>
+<!-- Footer -->
+<footer class="bg-black text-green-400 text-center py-4">
+  <p>&copy; 2023 ZE PIRATA TV. All rights reserved. | 
+    <a href="/privacy-policy" class="text-gray-300 hover:text-green-300">Privacy Policy</a> | 
+    <a href="/terms-of-service" class="text-gray-300 hover:text-green-300">Terms of Service</a></p>
+</footer>
 
-  <!-- Add video.js library -->
-  <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
- 
-	<!-- Add the following script after </body> tag -->
+<!-- External Scripts -->
+<script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="script.js"></script>
+
 <script>
-  // Create particles when the document is fully loaded
-  document.addEventListener('DOMContentLoaded', function () {
-    const header = document.querySelector('.matrix-text');
-    const text = header.textContent;
-    header.innerHTML = '';
-    for (let i = 0; i < text.length; i++) {
-      const char = text[i];
-      const span = document.createElement('span');
-      span.textContent = char;
-      span.style.setProperty('--x', Math.random() * 200 - 100); // Random horizontal position
-      span.style.setProperty('--y', Math.random() * 200 - 100); // Random vertical position
-      span.style.animation = `particle-animation ${Math.random() * 2 + 3}s linear infinite`; // Random animation duration
-      header.appendChild(span);
-    }
-  });
+
 </script>
-	
-	<script>
-	  
-	  
-	  
-    document.addEventListener('DOMContentLoaded', function () {
-      const videoPlayer = videojs('videoPlayer', {
-        html5: {
-          hls: {
-            overrideNative: true, // Use the HLS plugin even if native HLS is available
-          },
-        },
-      });
-      const playButton = document.getElementById('playButton');
-      const progress = document.querySelector('.progress');
-      const fullscreenButton = document.getElementById('fullscreenButton');
-      const diaDeJogoButton = document.querySelector('.dia-de-jogo-button');
-      const channelListContainer = document.querySelector('.channel-list');
-      		
-		
-
-      const channels = {
-    "AFRO MUSIC": "http://213.13.16.138/shls/LIVE%24Afro_Music/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "ALMA LUSA": "http://213.13.16.138/shls/LIVE%24Alma_Lusa_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "AMC": "http://213.13.16.138/shls/LIVE%24AMC_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "AMC CRIME": "http://213.13.16.138/shls/LIVE%24Crime_Investigation_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "ARTV": "http://213.13.16.138/shls/LIVE%24AR_TV/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "AXN HD": "http://213.13.16.138/shls/LIVE%24AXN_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "AXN MOVIES": "http://213.13.16.138/shls/LIVE%24AXN_Black_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "AXN White HD": "http://213.13.16.138/shls/LIVE%24AXN_White_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "BBC Entertainment": "http://213.13.16.138/shls/LIVE%24BBC_Entertainment/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "BBC World News": "http://213.13.16.138/shls/LIVE%24BBC_World/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "Blaze HD": "http://213.13.16.138/shls/LIVE%24Blaze_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "Bloomberg": "http://213.13.16.138/shls/LIVE%24Bloomberg/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "BTV": "http://213.13.16.138/shls/LIVE%24Benfica_TV_1_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "Caça e Pesca": "http://213.13.16.138/shls/LIVE%24Caca_e_Pesca_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "Caçavision": "http://213.13.16.138/shls/LIVE%24Cacavision_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "CANAL 11": "http://213.13.16.138/shls/LIVE%24C11_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "CANAL 180": "http://213.13.16.138/shls/LIVE%24CANAL_180/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "Cinemundo": "http://213.13.16.138/shls/LIVE%24Cinemundo_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "CMTV": "http://213.13.16.138/shls/LIVE%24CMTVHD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "CLUBBING TV": "http://213.13.16.138/shls/LIVE%24Clubbing_TV_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "Clubbing TV": "http://213.13.16.138/shls/LIVE%24Clubbing_TV_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "CNN 2": "http://213.13.16.138/shls/LIVE%24CNN/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "CNN Portugal": "https://video-auth2.iol.pt/live_cnn/live_cnn/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9Ny8yOS8yMDIzIDExOjk6MzIgQU0maGFzaF92YWx1ZT1RSk9Dd0ZDL3hJanZTdDIybFdWNW5nPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9OTQ4ZWY3YmItYmI3MS00Yzg0LTlhOTctMzQ3MGEzNTBmMDAy",
-    "Discovery Channel": "http://213.13.16.138/shls/LIVE%24Discovery_Channel_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "Dog TV": "http://213.13.16.138/shls/LIVE%24DOGTV_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "ELEVEN 1": "http://213.13.16.138/shls/LIVE%24Eleven_Sports_1_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "ELEVEN 2": "http://213.13.16.138/shls/LIVE%24Eleven_Sports_2_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "ELEVEN 3": "http://213.13.16.138/shls/LIVE%24Eleven_Sports_3_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "ELEVEN 4": "http://213.13.16.138/shls/LIVE%24Eleven_Sports_4_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "ELEVEN 5": "http://213.13.16.138/shls/LIVE%24Eleven_Sports_5_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "ELEVEN 6": "http://213.13.16.138/shls/LIVE%24Eleven_Sports_6_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "FOX": "http://213.13.16.138/shls/LIVE%24FOX_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "FOX Comedy": "http://213.13.16.138/shls/LIVE%24FOX_Comedy_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "FOX Crime": "http://213.13.16.138/shls/LIVE%24FOX_Crime_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "FOX LIFE": "http://213.13.16.138/shls/LIVE%24FOX_Life_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "FOX Movies": "http://213.13.16.138/shls/LIVE%24FOX_Movies_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "FUEL TV": "http://213.13.16.138/shls/LIVE%24Fuel_TV_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "Globo News": "http://213.13.16.138/shls/LIVE%24Globo_Premium_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "Hollywood": "http://213.13.16.138/shls/LIVE%24Hollywood_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "Historia": "http://213.13.16.138/shls/LIVE%24Historia_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "Localvisão TV": "http://213.13.16.138/shls/LIVE%24Localvisao_TV_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "MCM POP": "http://213.13.16.138/shls/LIVE%24MCM_POP/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "MCM TOP": "http://213.13.16.138/shls/LIVE%24MCM_TOP_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "Mezzo": "http://213.13.16.138/shls/LIVE%24Mezzo/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "Mezzo Live HD": "http://213.13.16.138/shls/LIVE%24Mezzo_Live_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "MTV 00S": "http://213.13.16.138/shls/LIVE%24VH1/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "MTV Live": "http://213.13.16.138/shls/LIVE%24MTV_Live_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "MTV PORTUGAL": "http://213.13.16.138/shls/LIVE%24MTV_Portugal_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "National Geographic": "http://213.13.16.138/shls/LIVE%24National_Geographic_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "National Geographic Wild": "http://213.13.16.138/shls/LIVE%24Nat_Geo_Wild_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "Odisseia": "http://213.13.16.138/shls/LIVE%24Odisseia_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "PFC": "http://213.13.16.138/shls/LIVE%24PFC/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "Record News": "http://213.13.16.138/shls/LIVE%24Record_News/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "Record TV": "http://213.13.16.138/shls/LIVE%24TV_Record_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "RTP1": "https://streaming-live.rtp.pt/liverepeater/smil:rtp1HD.smil/chunklist_b2540000_slpor.m3u8?tk=1690340400_9cff42d47910b45dc6efb3eddf384e6d0ca6fcf9",
-    "RTP2": "https://streaming-live.rtp.pt/liverepeater/smil:rtp2HD.smil/playlist.m3u8?tk=1690599600_c1bbe3995ac356eb3cd2c5aab59995c1886aebeb",
-    "RTP3": "https://streaming-live.rtp.pt/livetvhlsDVR/rtpnHDdvr.smil/chunklist_b2540000_DVR_slpor.m3u8",
-    "RTP Memoria": "http://213.13.16.138/shls/LIVE%24RTP_Memoria/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "SIC": "https://d1zx6l1dn8vaj5.cloudfront.net/out/v1/b89cc37caa6d418eb423cf092a2ef970/index.m3u8",
-    "SIC CARAS": "http://213.13.16.138/shls/LIVE%24SIC_Caras_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "SIC NOTICIAS": "http://213.13.16.138/shls/LIVE%24SIC_Noticias_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "SIC RADICAL": "http://213.13.16.138/shls/LIVE%24SIC_Radical_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "Sporting TV": "http://213.13.16.138/shls/LIVE%24Sporting_TV_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "SPORT TV1": "http://213.13.16.138/shls/LIVE%24SPORTTV1_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "SPORT TV2": "http://213.13.16.138/shls/LIVE%24SPORTTV2_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "SPORT TV3": "http://213.13.16.138/shls/LIVE%24SPORTTV3_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "SPORT TV4": "http://213.13.16.138/shls/LIVE%24SPORTTVLive_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "SPORT TV5": "http://213.13.16.138/shls/LIVE%24SPORTTV_GOLFE_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "SPORT TV PLUS": "http://213.13.16.138/shls/LIVE%24SPORTTV_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "Stingray Classica": "http://213.13.16.138/shls/LIVE%24Brava_HDTV/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "Stingray iConcerts": "http://213.13.16.138/shls/LIVE%24iCONCERTS/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "Stingray Loud": "http://213.13.16.138/shls/LIVE%24Stingray_Loud_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "Stingray Retro": "http://213.13.16.138/shls/LIVE%24Stingray_Retro_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "SyFy": "http://213.13.16.138/shls/LIVE%24SyFy_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "Trace Brazuca": "http://213.13.16.138/shls/LIVE%24Trace_Brazuca_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "Trace Toca": "http://213.13.16.138/shls/LIVE%24Trace_Toca_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "Trace Urban": "http://213.13.16.138/shls/LIVE%24Trace_TV_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "TVCine Action": "http://213.13.16.138/shls/LIVE%24TVCine_4_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "TVCine Edition": "http://213.13.16.138/shls/LIVE%24TVCine_2_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "TVCine Emotion": "http://213.13.16.138/shls/LIVE%24TVCine_3_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "TVCine Top": "http://213.13.16.138/shls/LIVE%24TVCine_1_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "TVI": "https://video-auth6.iol.pt/live_tvi/live_tvi/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9Ny8yOS8yMDIzIDEwOjEwOjIzIEFNJmhhc2hfdmFsdWU9b2c1dGdFOVkyck1UQm5VS3lZb05HQT09JnZhbGlkbWludXRlcz0xNDQwJmlkPTkwNDEyNDg3ODk4NjA4MzY2NjYmcm9sZT1tb2RlcmF0b3ImZXhwaXJlX3RpbWU9MTYyNjY5Mjk5Nw==",
-    "TVI FICÇÃO": "http://213.13.16.138/shls/LIVE%24TVI_Ficcao_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "TVI Reality": "http://213.13.16.138/shls/LIVE%24TVI_Reallity_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-    "TV Record": "http://213.13.16.138/shls/LIVE%24TV_Record_HD/index.m3u8?device=TVOS_Live&start=LIVE&end=END",
-   
-		  
-      };
-
-      function playChannel(channelUrl) {
-        videoPlayer.src({
-          src: channelUrl,
-          type: 'application/x-mpegURL',
-        });
-        videoPlayer.play();
-      }
-
-      function createChannelButtons() {
-        const sortedChannels = Object.keys(channels).sort();
-        for (const channelName of sortedChannels) {
-          const channelUrl = channels[channelName];
-          const channelButton = document.createElement('button');
-          channelButton.textContent = channelName;
-          channelButton.className = 'channel-button';
-          channelButton.addEventListener('click', function () {
-            playChannel(channelUrl);
-          });
-          channelListContainer.appendChild(channelButton);
-        }
-      }
-
-      function updatePlayButtonIcon() {
-        playButton.classList.toggle('mdi-pause', !videoPlayer.paused());
-        playButton.classList.toggle('mdi-play', videoPlayer.paused());
-      }
-
-      function updateProgressBar() {
-        const progressPercentage = (videoPlayer.currentTime() / videoPlayer.duration()) * 100;
-        progress.style.width = `${progressPercentage}%`;
-      }
-
-      function toggleFullScreen() {
-        if (videoPlayer.requestFullscreen) {
-          videoPlayer.requestFullscreen();
-        } else if (videoPlayer.webkitRequestFullscreen) {
-          videoPlayer.webkitRequestFullscreen();
-        } else if (videoPlayer.mozRequestFullScreen) {
-          videoPlayer.mozRequestFullScreen();
-        } else if (videoPlayer.msRequestFullscreen) {
-          videoPlayer.msRequestFullscreen();
-        }
-      }
-
-      function init() {
-        createChannelButtons();
-
-        playButton.addEventListener('click', () => {
-          if (videoPlayer.paused()) {
-            videoPlayer.play();
-          } else {
-            videoPlayer.pause();
-          }
-          updatePlayButtonIcon();
-        });
-
-        videoPlayer.on('timeupdate', updateProgressBar);
-
-        diaDeJogoButton.addEventListener('click', () => {
-          const currentChannelUrl = videoPlayer.src();
-          if (currentChannelUrl) {
-            window.open(currentChannelUrl, '_blank');
-          }
-        });
-      }
-
-      init();
-    });
-  </script>
 </body>
-
 </html>
