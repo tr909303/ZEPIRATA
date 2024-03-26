@@ -188,7 +188,7 @@ controls.appendChild(buttonsContainer);
 	"SPORT - COMBATE GLOBAL": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=960",  
     "SPORT - RED_BULL_TV": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_6660.m3u8",
 	"SPORT - DUBAI_RACING_2": "http://dmithrvll.cdn.mangomolo.com/dubairacing/smil:dubairacing.smil/chunklist_b1600000.m3u8",  
-	  " 🇵🇹 SPORT TV 1 TESTE": "https://love2live.wideiptv.top/SPT1/index.fmp4.m3u8?token=5541093781a5ceabdbad0f7f2b449ea7fdf9b98d-41509e8ac757cf7ab40b2085e2944224-1711421002-1711410202",
+	  " 🇵🇹 SPORT TV 1 TESTE": "https://love2live.wideiptv.top/SPT1/index.fmp4.m3u8?token=29dfb6953ee05efdb22294dcb23f2eeabede2f4b-a9626fabc66684823c3129bb0a460c4c-1711421683-1711410883",
 	  " 🇵🇹 SPORT TV 2 TESTE": "https://love2live.wideiptv.top/SPT2/index.fmp4.m3u8?token=d9d6297479c7ce8d5dac590338fc1597fd9cbbc2-314431d4ce17a023e028440c644f4fe9-1711421111-1711410311",
 	  " 🇵🇹 SPORT TV 3 TESTE": "https://nes05.jobdone.top:8088/live/game28/playlist.m3u8?vidictid=198079408695&id=120315&pk=8f8b5023b973505a31b45bc75f79569ba5f1a78e85ec33363d05f6006d8dea283b8111c2ddfe34b24a05567876cab0b697b34c7009361608f8303da794727c27",
 	  
